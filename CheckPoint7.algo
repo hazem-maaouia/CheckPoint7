@@ -1,0 +1,24 @@
+ALGORITHM phrase
+VAR
+    ch:String;
+    longeur:INTEGER:=0;
+    nbmot:INTEGER:=0;
+    nbvoyelle:INTEGER:=0;
+BEGIN
+    read(ch);
+FOR i FROM 1 TO ch.length 
+longeur:= longeur + 1;
+IF(ch[i] == ' ') THEN
+nbmot:= nbmot + 1;
+END_IF
+IF(ch[i] == 'a' || ch[i] == 'e' || ch[i] == 'i' || ch[i] == 'o' || ch[i] == 'u' || ch[i] == 'y') THEN
+nbvoyelle:= nbvoyelle + 1;
+END_IF
+IF(ch[i] == 'A' || ch[i] == 'E' || ch[i] == 'I' || ch[i] == 'O' || ch[i] == 'U' || ch[i] == 'Y') THEN
+nbvoyelle:= nbvoyelle + 1;
+END_IF
+END_FOR
+write(longeur);
+write(nbmot);
+write(nbvoyelle);
+END
